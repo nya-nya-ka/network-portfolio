@@ -1,0 +1,20 @@
+Router> enable
+Router# configure terminal
+
+! VLAN10用サブインターフェース
+Router(config)# interface g0/0.10
+Router(config-subif)# encapsulation dot1Q 10
+Router(config-subif)# ip address 192.168.10.254 255.255.255.0
+Router(config-subif)# no shutdown
+Router(config-subif)# exit
+
+! VLAN20用サブインターフェース
+Router(config)# interface g0/0.20
+Router(config-subif)# encapsulation dot1Q 20
+Router(config-subif)# ip address 192.168.20.254 255.255.255.0
+Router(config-subif)# no shutdown
+Router(config-subif)# exit
+
+! 物理インターフェースを有効化
+Router(config)# interface g0/0
+Router(config-if)# no shutdown

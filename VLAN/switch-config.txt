@@ -1,0 +1,32 @@
+Switch> enable
+Switch# configure terminal
+
+! VLAN作成
+Switch(config)# vlan 10
+Switch(config-vlan)# name VLAN10
+Switch(config-vlan)# exit
+
+Switch(config)# vlan 20
+Switch(config-vlan)# name VLAN20
+Switch(config-vlan)# exit
+
+! ポートをVLANに割り当て
+Switch(config)# interface fastEthernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+
+Switch(config)# interface fastEthernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+
+Switch(config)# interface fastEthernet 0/3
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config-if)# exit
+
+! ルーター接続ポートはトランクに
+Switch(config)# interface fastEthernet 0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
