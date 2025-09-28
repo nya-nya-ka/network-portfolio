@@ -65,7 +65,7 @@ VLAN/
 ![PC0→PC1 Ping成功](ping-results/pc0_to_pc1.png)
 
 ### PC0 → PC2
-異なる VLAN に属する PC0 から PC2 への通信は最初の Ping がタイムアウトしました。
+異なる VLAN に属する PC0 から PC2 への通信は最初の Ping がタイムアウトしました。 
 これは VLAN 間ルーティングがまだ ARP テーブルに反映されていなかったためだと考えられます。
 ![PC0→PC2 1回目失敗](ping-results/pc0_to_pc2_first_fail.png)
 
@@ -79,6 +79,7 @@ VLAN/
 Google以外の様々な外部のサーバーも試しましたが、失敗する例を見ることができませんでした。
 
 今回、異なるVLANに属するPC同士のPingの実験で最初のPingが失敗する様子を実際に観察でき、理論で読んだことと実験結果が結びついたのが面白く感じました。
+
 
 
 
