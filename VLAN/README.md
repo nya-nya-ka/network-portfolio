@@ -28,6 +28,22 @@ VLAN/
 - `vlan-lab.pkt` : Packet Tracer 演習ファイル
 - `ping-results/` : Ping結果画像
 
+## ネットワークトポロジ
+
+今回の VLAN 演習で構築したネットワークは以下の通りです。
+
+![VLAN Topology](topology.png)
+
+### トポロジの概要
+- PC0 → VLAN10、PC1 → VLAN10、PC2 → VLAN20
+- スイッチのポート接続
+  - Fa0/1 → VLAN10
+  - Fa0/2 → VLAN20
+  - Fa0/24 → Trunk（Router-on-a-Stick 用）
+- ルーターのサブインターフェース
+  - G0/0.10: 192.168.10.254
+  - G0/0.20: 192.168.20.254
+
 
 ## Ping結果
 
@@ -42,6 +58,7 @@ VLAN/
 
 2回目以降は成功し、VLAN 間通信が正しく機能していることが確認できました。
 ![PC0→PC2 成功](ping-results/pc0_to_pc2_success.png)
+
 
 
 
