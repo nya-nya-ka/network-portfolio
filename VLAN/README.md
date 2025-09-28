@@ -45,8 +45,17 @@ VLAN/
   - G0/0.20: 192.168.20.254
 
 ## VLAN 演習でのデバイス設定
-- スイッチ設定抜粋: switch-config.txt
-- ルーター設定抜粋: router-config.txt
+
+- **スイッチ設定抜粋 (switch-config.txt)**
+  - VLAN 10 と VLAN 20 を作成
+  - 各ポートを VLAN に割り当て (Fa0/1 → VLAN10、Fa0/2 → VLAN20)
+  - Trunk ポート設定 (Fa0/24) → ルーターとの Router-on-a-Stick 接続用
+
+- **ルーター設定抜粋 (router-config.txt)**
+  - サブインターフェース作成
+    - G0/0.10: 192.168.10.254 / VLAN10
+    - G0/0.20: 192.168.20.254 / VLAN20
+  - Router-on-a-Stick 用に 802.1Q タグ付きインターフェース設定
 
 
 ## Ping結果
@@ -62,6 +71,7 @@ VLAN/
 
 2回目以降は成功し、VLAN 間通信が正しく機能していることが確認できました。
 ![PC0→PC2 成功](ping-results/pc0_to_pc2_success.png)
+
 
 
 
