@@ -32,9 +32,13 @@ VLAN/
 ## Ping結果
 
 ### PC0 → PC1
+同じ VLAN 内の PC0 から PC1 への通信は問題なく成功しました。
 ![PC0→PC1 Ping成功](ping-results/pc0_to_pc1.png)
 
 ### PC0 → PC2
-最初のPingはタイムアウトしましたが、2回目以降は成功しました。
+異なる VLAN に属する PC0 から PC2 への通信は最初の Ping がタイムアウトしました。
+これは VLAN 間ルーティングがまだ ARP テーブルに反映されていなかったためだと考えられます。
+2回目以降は成功し、VLAN 間通信が正しく機能していることが確認できました。
 ![PC0→PC2 1回目失敗](ping-results/pc0_to_pc2_first_fail.png)
 ![PC0→PC2 成功](ping-results/pc0_to_pc2_success.png)
+
