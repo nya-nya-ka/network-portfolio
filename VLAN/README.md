@@ -44,6 +44,10 @@ VLAN/
   - G0/0.10: 192.168.10.254
   - G0/0.20: 192.168.20.254
 
+## VLAN 演習でのデバイス設定
+- スイッチ設定抜粋: switch-config.txt
+- ルーター設定抜粋: router-config.txt
+
 
 ## Ping結果
 
@@ -58,6 +62,7 @@ VLAN/
 
 2回目以降は成功し、VLAN 間通信が正しく機能していることが確認できました。
 ![PC0→PC2 成功](ping-results/pc0_to_pc2_success.png)
+
 
 
 
