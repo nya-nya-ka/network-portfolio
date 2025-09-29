@@ -7,7 +7,7 @@
 
 -  [ルーターとL2スイッチによるVLAN間ルーティング (Router-on-a-Stick)](./VLAN-L2-Router)
 
-### [L3スイッチによるVLAN間ルーティング](./VLAN-L3)
+-  [L3スイッチによるVLAN間ルーティング](./VLAN-L3)
 
 
 ### [ACL](./ACL)
