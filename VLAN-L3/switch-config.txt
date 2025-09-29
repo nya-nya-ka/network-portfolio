@@ -1,0 +1,49 @@
+! ========== 初期設定とL3機能の有効化 ==========
+Switch>enable
+Switch#configure terminal
+
+! L3ルーティング機能を有効化（VLAN間の通信を可能にする）
+Switch(config)#ip routing
+
+! ==============================================
+! SVI (スイッチ仮想インターフェース) の設定
+! 各VLANのデフォルトゲートウェイを作成
+! ==============================================
+
+! VLAN 10の設定
+Switch(config)#interface vlan 10
+! VLAN 10 ネットワーク (192.168.100.0/24) のゲートウェイIP
+Switch(config-if)#ip address 192.168.100.1 255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+! VLAN 20の設定
+Switch(config)#interface vlan 20
+! VLAN 20 ネットワーク (192.168.200.0/24) のゲートウェイIP
+Switch(config-if)#ip address 192.168.200.1 255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+! ==============================================
+! アクセスポートの設定
+! 各ポートを対応するVLANに割り当て
+! ==============================================
+
+! FastEthernet 0/1 (VLAN 10用ポート)
+Switch(config)#interface FastEthernet 0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+
+! FastEthernet 0/2 (VLAN 20用ポート)
+Switch(config)#interface FastEthernet 0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
+
+! ==============================================
+! 設定の保存
+! ==============================================
+Switch(config)#end
+! 設定を保存
+Switch#copy running-config startup-config
