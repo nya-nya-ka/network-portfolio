@@ -6,9 +6,9 @@
 ## 演習一覧
 
 ### [ルーターとL2スイッチによるVLAN間ルーティング (Router-on-a-Stick)](./VLAN-L2-Router)
-- 複数 VLAN の構築
-- Router-on-a-Stick を使った VLAN 間ルーティング
-- Ping による通信確認
+
+### [L3スイッチによるVLAN間ルーティング](./VLAN-L3)
+
 
 ### [ACL](./ACL)
 - アクセス制御リストの設定と通信制限
