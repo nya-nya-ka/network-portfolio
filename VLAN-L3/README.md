@@ -10,6 +10,7 @@
 
 ## 内容
 - フォルダ構成
+- L3スイッチの原理
 - ネットワークトポロジ
 - デバイス設定
 - Ping応答結果
@@ -35,14 +36,24 @@ VLAN-L3/
 
 ### ファイル説明
 - `topology.png` : ネットワークトポロジ図
+- `PC0_ip.png` : PC0のIPアドレス設定
+- `PC1_ip.png` : PC1のIPアドレス設定
+- `PC2_ip.png` : PC2のIPアドレス設定
+- `PC3_ip.png` : PC3のIPアドレス設定
 - `switch-config.txt` : スイッチ設定抜粋
-- `router-config.txt` : ルーター設定抜粋
 - `vlan-lab.pkt` : Packet Tracer 演習ファイル
 - `ping-results/` : Ping結果画像
 
-## ネットワークトポロジ
+## L3スイッチのルーティングの原理
+- L3スイッチはVLANごとに仮想インターフェース(SVI)を持ち、SVIごとにIPアドレスが割り当てられる
+- PCは自分のデフォルトゲートウェイとして、所属するVLANのSVIのIPアドレスを設定する
+- L3スイッチはそのSVIを使ってVLAN間のルーティングを行う
 
-今回の VLAN 演習で構築したネットワークは以下の通りです。
+## ネットワークトポロジ
+以下のような構成を作成する。
+- PCは画面下部から「PC-PT」を選択してドラッグ&ドロップ
+- スイッチは画面下部から「3560-24PS」を選択してドラッグ&ドロップ
+- 各デバイス間を「Copper Cross-Over」という線でつなぐ
 
 ![VLAN Topology](topology.png)
 
