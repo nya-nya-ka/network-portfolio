@@ -5,7 +5,7 @@
 
 ## 演習一覧
 
-### [ルーターとL2スイッチによるVLAN間ルーティング (Router-on-a-Stick)](./VLAN-L2-Router)
+-  [ルーターとL2スイッチによるVLAN間ルーティング (Router-on-a-Stick)](./VLAN-L2-Router)
 
 ### [L3スイッチによるVLAN間ルーティング](./VLAN-L3)
 
