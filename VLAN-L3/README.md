@@ -17,15 +17,19 @@
 
 ## フォルダ構成
 ```
-VLAN/
+VLAN-L3/
 ├─ topology.png
+├─ PC0_ip.png
+├─ PC1_ip.png
+├─ PC2_ip.png
+├─ PC3_ip.png
 ├─ switch-config.txt
-├─ router-config.txt
 ├─ vlan-lab.pkt
 ├─ ping-results/
-│   ├─ pc0_to_pc1.png
-│   ├─ pc0_to_pc2_first_fail.png
-│   └─ pc0_to_pc2_success.png
+│   ├─ PC0_to_PC1.png
+│   ├─ PC0_to_PC2.png
+│   ├─ PC0_to_PC3.png
+│   └─ PC2_to_PC0.png
 └─ README.md
 ```
 
