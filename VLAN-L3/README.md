@@ -41,7 +41,7 @@ VLAN-L3/
 - L3スイッチの原理
 - ネットワークトポロジ
 - デバイス設定
-- Ping応答結果
+- Ping結果
 - 感想
 
 
@@ -129,15 +129,20 @@ VLAN-L3/
    Router-on-a-Stick で作るサブインターフェース（例: G0/0.10 や G0/0.20）は作らずにおきます。  
    ルーター本体は電源を入れるだけ。
 
-### 結果
+### Ping結果
 
-- **同じ VLAN 間（PC0 → PC1）**  
-  ルーターを経由せず直接通信できるので成功。  
-  ![PC0→PC1 Ping成功 (サブインターフェースなし)](ping-results/pc0_to_pc1_no_subif.png)
+- 同じVLAN間
+  - PC0からPC1に繋がることを確認
+  - ルーターを経由せず直接通信できるため当たり前に成功
+  ![PC0→PC1 Ping成功](ping-results/PC0_to_PC1.png)
 
-- **異なる VLAN 間（PC0 → PC2）**  
-  ルーターに VLAN ごとのゲートウェイが設定されていないため通信できず、Ping は失敗。  
-  ![PC0→PC2 Ping失敗 (サブインターフェースなし)](ping-results/pc0_to_pc2_no_subif.png)
+- 異なるVLAN間
+  - PC0からPC2に繋がることを確認
+  ![PC0→PC2 Ping成功](ping-results/PC0_to_PC2.png)
+  - PC0からPC3に繋がることを確認
+  ![PC0→PC3 Ping成功](ping-results/PC0_to_PC3.png)
+  - PC2からPC0に繋がることを確認
+  ![PC2→PC0 Ping成功](ping-results/PC2_to_PC0.png)
 
 
 
