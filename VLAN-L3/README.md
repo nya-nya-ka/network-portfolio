@@ -58,7 +58,7 @@ VLAN-L3/
 
 ![VLAN Topology](topology.png)
 
-##　デバイス設定
+## デバイス設定
 
 ### PC0での設定
 - 「Desktop」タグの「IP Configuration」を選択して開く画面から、IPアドレス、サブネットマスク、デフォルトゲートウェイを設定する
