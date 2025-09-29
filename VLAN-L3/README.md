@@ -97,38 +97,6 @@ VLAN-L3/
   - Fa 0/1とFa 0/2がVLAN10に、Fa 0/3とFa 0/4がVLAN20にそれぞれ割り当てられているのがわかる
  ![command4](Switch-command/command4.png)
 
-## Ping結果
-
-### PC0 → PC1
-同じ VLAN 内の PC0 から PC1 への通信は問題なく成功しました。
-![PC0→PC1 Ping成功](ping-results/pc0_to_pc1.png)
-
-### PC0 → PC2
-異なる VLAN に属する PC0 から PC2 への通信は最初の Ping がタイムアウトしました。   
-これは VLAN 間ルーティングがまだ ARP テーブルに反映されていなかったためだと考えられます。
-![PC0→PC2 1回目失敗](ping-results/pc0_to_pc2_first_fail.png)
-
-2回目以降は成功し、VLAN 間通信が正しく機能していることが確認できました。
-![PC0→PC2 成功](ping-results/pc0_to_pc2_success.png)
-
-## 補足実験（Router-on-a-Stickなし）
-
-今回の実験では、あえて Router-on-a-Stick を設定せずに Ping を試すとどうなるかを確認します。
-
-### 実験手順
-
-1. PC とスイッチは上の設定をそのまま使います。
-   - PC0: 192.168.10.1 (VLAN10)
-   - PC1: 192.168.10.2 (VLAN10)
-   - PC2: 192.168.20.1 (VLAN20)
-   - Fa0/1 → VLAN10 (PC0接続)
-   - Fa0/2 → VLAN20 (PC2接続)
-   - Fa0/24 → Trunk (スイッチ⇔ルーター接続)
-     
-2. ルーターはサブインターフェースを作らない  
-   Router-on-a-Stick で作るサブインターフェース（例: G0/0.10 や G0/0.20）は作らずにおきます。  
-   ルーター本体は電源を入れるだけ。
-
 ### Ping結果
 
 - 同じVLAN間
