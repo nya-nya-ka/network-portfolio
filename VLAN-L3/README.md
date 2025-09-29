@@ -10,10 +10,16 @@
 ```
 VLAN-L3/
 ├─ topology.png
-├─ PC0_ip.png
-├─ PC1_ip.png
-├─ PC2_ip.png
-├─ PC3_ip.png
+├─ PC_IP/
+│   ├─ PC0_ip.png
+│   ├─ PC1_ip.png
+│   ├─ PC2_ip.png
+│   └─ PC3_ip.png
+├─ Switch-command/
+│   ├─ command1.png
+│   ├─ command2.png
+│   ├─ command3.png
+│   └─ command4.png
 ├─ switch-config.txt
 ├─ vlan-lab.pkt
 ├─ ping-results/
@@ -35,11 +41,9 @@ VLAN-L3/
 
 ### ファイル説明
 - `topology.png` : ネットワークトポロジ図
-- `PC0_ip.png` : PC0のIPアドレス設定
-- `PC1_ip.png` : PC1のIPアドレス設定
-- `PC2_ip.png` : PC2のIPアドレス設定
-- `PC3_ip.png` : PC3のIPアドレス設定
-- `switch-config.txt` : スイッチ設定抜粋
+- `PC_IP` : PCのIPアドレス設定
+- `Switch-command` : L3スイッチの設定
+- `switch-config.txt` : L3スイッチ設定抜粋テキストファイル
 - `vlan-lab.pkt` : Packet Tracer 演習ファイル
 - `ping-results/` : Ping結果画像
 
@@ -59,19 +63,19 @@ VLAN-L3/
 ### PC0での設定
 - 「Desktop」タグの「IP Configuration」を選択して開く画面から、IPアドレス、サブネットマスク、デフォルトゲートウェイを設定する
 - IPアドレスには自身のIPアドレス「192.168.100.10」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.100.1」を指定する
-![PC0](PC0_ip.png)
+![PC0](PC_IP/PC0_ip.png)
 
 ### PC1での設定
 - IPアドレスには自身のIPアドレス「192.168.100.20」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.100.1」を指定する
-![PC1](PC1_ip.png)
+![PC1](PC_IP/PC1_ip.png)
 
 ### PC2での設定
 - IPアドレスには自身のIPアドレス「192.168.200.10」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.200.1」を指定する
-![PC2](PC2_ip.png)
+![PC2](PC_IP/PC2_ip.png)
 
 ### PC3での設定
 - IPアドレスには自身のIPアドレス「192.168.200.20」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.200.1」を指定する
-![PC3](PC3_ip.png)
+![PC3](PC_IP/PC3_ip.png)
 
 
 ## VLAN 演習でのデバイス設定
