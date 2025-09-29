@@ -58,6 +58,8 @@ VLAN-L3/
 
 ![VLAN Topology](topology.png)
 
+##　デバイス設定
+
 ### PC0での設定
 - 「Desktop」タグの「IP Configuration」を選択して開く画面から、IPアドレス、サブネットマスク、デフォルトゲートウェイを設定する
 - IPアドレスには自身のIPアドレス「192.168.100.10」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.100.1」を指定する
@@ -75,20 +77,25 @@ VLAN-L3/
 - IPアドレスには自身のIPアドレス「192.168.200.20」、サブネットマスクには「/24」を表す「255.255.255.0」，デフォルトゲートウェイは「192.168.200.1」を指定する
 ![PC3](PC-IP/PC3_ip.png)
 
+##　スイッチ設定
+- ルーティングがデフォルトで無効になっているため有効化する
+ ![command1](Switch-command/command1.png)
 
-## VLAN 演習でのデバイス設定
+- VLAN作成
+  - VLAN10とVLAN20を作成
+  - それぞれのSVIとして192.168.100.1、192.168.200.1を設定
+ ![command2](Switch-command/command2.png)
 
-- **スイッチ設定抜粋 (switch-config.txt)**
-  - VLAN 10 と VLAN 20 を作成
-  - 各ポートを VLAN に割り当て (Fa0/1 → VLAN10、Fa0/2 → VLAN20)
-  - Trunk ポート設定 (Fa0/24) → ルーターとの Router-on-a-Stick 接続用
+- 各インターフェース設定
+  - Fa 0/1はVLAN10に所属するアクセスポートとして設定
+  - Fa 0/2はVLAN10に所属するアクセスポートとして設定
+  - Fa 0/3はVLAN20に所属するアクセスポートとして設定
+  - Fa 0/4はVLAN20に所属するアクセスポートとして設定
+ ![command3](Switch-command/command3.png)
 
-- **ルーター設定抜粋 (router-config.txt)**
-  - サブインターフェース作成
-    - G0/0.10: 192.168.10.254 / VLAN10
-    - G0/0.20: 192.168.20.254 / VLAN20
-  - Router-on-a-Stick 用に 802.1Q タグ付きインターフェース設定
-
+- VLAN設定内容確認
+  - Fa 0/1とFa 0/2がVLAN10に、Fa 0/3とFa 0/4がVLAN20にそれぞれ割り当てられているのがわかる
+ ![command4](Switch-command/command4.png)
 
 ## Ping結果
 
