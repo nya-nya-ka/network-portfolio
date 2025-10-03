@@ -15,6 +15,12 @@ VLAN/
 ├─ switch-config.txt
 ├─ router-config.txt
 ├─ vlan-lab.pkt
+├─ Switch-command/
+│   ├─ command1.png
+│   ├─ command2.png
+│   └─ command3.png
+├─ Router-command/
+│   └─ command1.png
 ├─ ping-results/
 │   ├─ pc0_to_pc1.png
 │   ├─ pc0_to_pc2_first_fail.png
@@ -166,6 +172,7 @@ Google以外の様々な外部のサーバーも試したが、失敗する例�
 今後は、より大規模なネットワークや複雑なルーティング構成にも応用できるように勉強していきたい。
 
 2025/9/28
+
 
 
 
