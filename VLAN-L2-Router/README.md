@@ -29,8 +29,11 @@ VLAN/
 ```
 ### ファイル説明
 - `topology.png` : ネットワークトポロジ図
-- `switch-config.txt` : スイッチ設定抜粋
-- `router-config.txt` : ルーター設定抜粋
+- `PC-IP` : PCのIPアドレス設定
+- `Switch-command` : L2スイッチの設定
+- `Router-command` : ルーターの設定
+- `switch-config.txt` : スイッチ設定抜粋テキストファイル
+- `router-config.txt` : ルーター設定抜粋テキストファイル
 - `vlan-lab.pkt` : Packet Tracer 演習ファイル
 - `ping-results/` : Ping結果画像
 
@@ -172,6 +175,7 @@ Google以外の様々な外部のサーバーも試したが、失敗する例�
 今後は、より大規模なネットワークや複雑なルーティング構成にも応用できるように勉強していきたい。
 
 2025/9/28
+
 
 
 
