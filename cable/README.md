@@ -1,4 +1,4 @@
-# Packet Tracer 演習：Copperケーブルの種類と使い分け
+# Copperケーブルの種類と使い分け
 
 ## 演習目的
 - Packet Tracerではデバイス同士をつなぐ際に様々なケーブル類を選択できる  
